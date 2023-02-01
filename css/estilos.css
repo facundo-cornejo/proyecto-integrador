@@ -1,0 +1,100 @@
+/************************Reglas para todos************************/
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+*{
+    font-family: 'Dosis', sans-serif;
+}
+body{
+    height: 100%;
+    background-color: rgb(223, 223, 223);
+}
+
+/************************Cabecera************************/
+.header{
+    background-color: rgb(114, 191, 68);
+}
+
+/************************Sección Principal************************/
+/************************Aside************************/
+.aside{
+    background-color: rgb(216, 216, 217);
+    text-align: justify;
+}
+
+.contenedor-imagen{
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-perfil{
+    height: 300px;
+}
+
+.items-aside{
+    color: rgb(114, 191, 68);
+}
+
+aside a{
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+aside a:hover{
+    text-decoration: underline;
+}
+
+aside a:visited{
+    color: #000;
+}
+
+.titulos-aside{
+    color: rgb(114, 191, 68);
+    font-weight: bold;
+}
+
+/************************Main************************/
+.titulos-main{
+    color: rgb(114, 191, 68);
+    font-weight: bold;
+}
+
+.main{
+    background-color: #FFF;
+    text-align: justify;
+}
+
+main ul li{
+    color: rgb(114, 191, 68)
+}
+
+.textos-main{
+    color: #000;
+}
+
+/************************Pie de Página************************/
+footer {
+    background-color: rgb(114, 191, 68);
+}
+
+footer a{
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+footer a:visited{
+    color: #000;
+}
+
+.items-footer{
+    color: rgb(255, 255, 255);
+}
+.titulos-footer{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
