@@ -13,8 +13,19 @@ body{
 .header{
     background-color: rgb(114, 191, 68);
 }
+.header a{
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-/************************Sección Principal************************/
+.header a:hover{
+    text-decoration: underline;
+}
+
+.header a:visited{
+    color: #FFF;
+}
 /************************Aside************************/
 .aside{
     background-color: rgb(216, 216, 217);
@@ -97,4 +108,10 @@ footer a:visited{
 .titulos-footer{
     color: rgb(255, 255, 255);
     font-weight: bold;
+}
+
+/************************Modal************************/
+.modal-backdrop {
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
 }

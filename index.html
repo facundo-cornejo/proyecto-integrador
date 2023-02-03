@@ -12,21 +12,110 @@
     <title>Facundo Cornejo</title>
 </head>
 <body>
+<!--Modal-->
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Personalizar página</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Cambio de color -->
+            <div class="container">
+                <div class="row border border-1 border-dark border-top-0 border-end-0 border-start-0">
+                    <form action="#">   
+                    <div class="col-12 p-1">
+                        <label for="colorInputBody"><b>Seleccione el color para el fondo: </b></label>
+                        <input class="d-inline" type="color" id="colorInputBody" value="#D8D8D9">
+                    </div>
+                    <div class="col-12 p-1">
+                        <button type="button" id="colorBtnBodyUpdate" class="btn btn-success" value="" onclick="cambiarColorBody()"><i class="fa-solid fa-check"></i> Aplicar</button>
+                        <button type="button" id="colorBtnBodyReset" class="btn btn-danger" value="" onclick="restableceColorBody()"><i class="fa-solid fa-trash"></i> Restablecer</button>                            
+                    </div>
+                    </form>
+                </div>
+                <div class="row border border-1 border-dark border-top-0 border-end-0 border-start-0">
+                    <form action="#">   
+                    <div class="col-12 p-1">
+                        <label for="colorInputMain"><b>Seleccione el color para la sección principal: </b></label>
+                        <input class="d-inline" type="color" id="colorInputMain" value="#FFFFFF">
+                    </div>
+                    <div class="col-12 p-1">
+                        <button type="button" id="colorBtnMainUpdate" class="btn btn-success" value="" onclick="cambiarColorMain()"><i class="fa-solid fa-check"></i> Aplicar</button>
+                        <button type="button" id="colorBtnMainReset" class="btn btn-danger" value="" onclick="restableceColorMain()"><i class="fa-solid fa-trash"></i> Restablecer</button>                            
+                    </div>
+                    </form>
+                </div>
+                <div class="row border border-1 border-dark border-top-0 border-end-0 border-start-0">
+                    <form action="#">   
+                    <div class="col-12 p-1">
+                        <label for="colorInputAside"><b>Seleccione el color para la sección lateral: </b></label>
+                        <input class="d-inline" type="color" id="colorInputAside" value="#d4d4d5">
+                    </div>
+                    <div class="col-12 p-1">
+                        <button type="button" id="colorBtnAsideUpdate" class="btn btn-success" value="" onclick="cambiarColorAside()"><i class="fa-solid fa-check"></i> Aplicar</button>
+                        <button type="button" id="colorBtnAsideReset" class="btn btn-danger" value="" onclick="restableceColorAside()"><i class="fa-solid fa-trash"></i> Restablecer</button>                                                    
+                    </div>
+                    </form>
+                </div> 
+                <div class="row border border-1 border-dark border-top-0 border-end-0 border-start-0">
+                    <form action="#">   
+                    <div class="col-12 p-1">
+                        <label for="colorInputEncabezado"><b>Seleccione el color para el encabezado: </b></label>
+                        <input class="d-inline" type="color" id="colorInputEncabezado" value="#72bf44">
+                    </div>
+                    <div class="col-12 p-1">
+                        <button type="button" id="colorBtnEncabezadoUpdate" class="btn btn-success" value="" onclick="cambiarColorEncabezado()"><i class="fa-solid fa-check"></i> Aplicar</button>
+                        <button type="button" id="colorBtnEncabezadoReset" class="btn btn-danger" value="" onclick="restableceColorEncabezado()"><i class="fa-solid fa-trash"></i> Restablecer</button>                            
+                    </div>
+                    </form>
+                </div>
+                <div class="row border border-1 border-dark border-top-0 border-end-0 border-start-0">
+                    <form action="#">   
+                    <div class="col-12 p-1">
+                        <label for="colorInputPie"><b>Seleccione el color para el pie: </b></label>
+                        <input class="d-inline" type="color" id="colorInputPie" value="#72bf44">
+                    </div>
+                    <div class="col-12 p-1">
+                        <button type="button" id="colorBtnPieUpdate" class="btn btn-success" value="" onclick="cambiarColorPie()"><i class="fa-solid fa-check"></i> Aplicar</button>
+                        <button type="button" id="colorBtnPieReset" class="btn btn-danger" value="" onclick="restableceColorPie()"><i class="fa-solid fa-trash"></i> Restablecer</button>                                                    
+                    </div>
+                    </form>
+                </div>
+                                                            
+            </div>
+            <!-- Cambio de color --> 
+        </div>
+      </div>
+    </div>
+  </div>
+<!--Modal-->
+
+               
     <div class="container">
         <!-- Cabecera-->
-        <div class="row">
-            <header class="col-12 header py-5 text-white">
-                <h1 class="text-white text-center">Facundo Mariano Cornejo</h1>
+        <div class="row header" id="encabezado">
+            <header class="col-12 py-5 text-white">
+                <h1 class="text-white text-center">Facundo Mariano Cornejo</h1>               
             </header>
+            <div class="col-12">
+                <a class="float-end" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-gear link-header"></i> Visualización</a>
+            </div>          
         </div>
+
         <!--Sección Principal-->
         <div class="row">
             <!--Columna Izquierda-->
-            <main class="col-12 col-sm-12 col-md-7 col-lg-8 col-xl-9 py-1 main order-second order-sm-second order-md-first order-lg-first order-xl-first">
+            <main id="seccionPrincipal" class="col-12 col-sm-12 col-md-7 col-lg-8 col-xl-9 py-1 main order-second order-sm-second order-md-first order-lg-first order-xl-first">
                 <span class="text-right float-end fw-bold">Ha transcurrido <span id="cantidadDias"></span> días desde la última modificación</span>
                 <h2 class="titulos-main">Formación Académica:</h2>
                 <p>
-                    <span class="fw-bold">Universidad Nacional de La Pampa - Carreras de Grado</span><br>
+                    <span class="fw-bold">Universidad Nacional de La Pampa - Carreras</span><br>
                     <ul>
                         <li><span class="textos-main">Profesorado en Computación (Plan 1998):  50% de aprobación de carrera</span></li>
                         <li><span class="textos-main">Tecnicatura en Informática de Gestión: 69.23% de aprobación de carrera</span></li>
@@ -69,7 +158,7 @@
             </main>
 
             <!--Columna Derecha-->
-            <aside class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-3 aside border border-light border-5 order-first order-sm-first order-md-second order-lg-second order-xl-second">
+            <aside id="columnaLateral" class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-3 aside border border-light border-5 order-first order-sm-first order-md-second order-lg-second order-xl-second">
                 <div class="contenedor-imagen pt-1">
                     <img class="shadow-lg rounded-circle img-fluid imagen-perfil border border-5 border-light" src="images/perfil.jpg" alt="Imagen de Facundo Cornejo">
                 </div>
@@ -83,7 +172,7 @@
             </aside>
             
             <!--Pie-->
-            <footer class="col-12 text-center py-4 fw-bold">
+            <footer class="col-12 text-center py-4 fw-bold" id="pie">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 d-lg-none d-md-none d-sm-block d-block titulos-footer">
@@ -112,9 +201,9 @@
             </footer>
         </div>
     </div>
-    <script src="js/funciones.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="js/funciones.js"></script>
 </body>
 </html>
